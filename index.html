@@ -736,7 +736,8 @@ document.getElementById("radius").innerHTML=theradius;
 document.getElementById("rangeElement").value=theradius;	
 
 // LECTURE PARTIE PARC 
-const uneurl="./parc_national_20230314.csv";
+// const uneurl="./parc_national_20230314.csv";
+const uneurl="./parc_national_20231202.csv";
 const lesparcs={'parcs':[]}; // permet de passer les infos sur les parcs dans la partie eoliennes
 let unepremierereponse=fetch(uneurl)
   // step 1 : read file en encodage UTF8 (fetch response.text() ne prend que utf8 donc on convertit le fichier origine)
@@ -778,7 +779,8 @@ let unepremierereponse=fetch(uneurl)
   ;
  
 // LECTURE PARTIE EOLIENNE 
-  uneautreurl="./aerogenerateur_national_20230314.csv";
+//  uneautreurl="./aerogenerateur_national_20230314.csv";
+uneautreurl="./aerogenerateur_national_20231202.csv";
   let allpois={'type': 'FeatureCollection','features':[]};
 function spec_epsg(unepsg){
 		let laspec;
