@@ -403,7 +403,7 @@ function drawMap(obs_point,a_geojson,a_circle,some_sectors){
 	zoom: 11 // starting zoom = 1 mais on prend 11
 	});
 	map.addControl(new maplibregl.AttributionControl({
-customAttribution: "IGN"
+customAttribution: "IGN, Georisques.gouv.fr"
 }), 'top-left');
 	var here_marker = new maplibregl.Marker()
 	.setLngLat(obs_point)
@@ -434,7 +434,7 @@ customAttribution: "IGN"
 				map.addSource('lesaltitudes', {
 						'type': 'raster',
 						'tiles': [
-						'https://wxs.ign.fr/altimetrie/geoportail/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=ELEVATION.CONTOUR.LINE&TILEMATRIXSET=PM&TILEMATRIX={z}&TILECOL={x}&TILEROW={y}&STYLE=normal&FORMAT=image/png'
+						'https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=ELEVATION.CONTOUR.LINE&TILEMATRIXSET=PM&TILEMATRIX={z}&TILECOL={x}&TILEROW={y}&STYLE=normal&FORMAT=image/png'
 						],
 						'tileSize': 256
 					});
@@ -442,14 +442,14 @@ customAttribution: "IGN"
 				map.addSource('lesombres', {
 						'type': 'raster',
 						'tiles': [
-						'https://wxs.ign.fr/altimetrie/geoportail/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=ELEVATION.ELEVATIONGRIDCOVERAGE.SHADOW&TILEMATRIXSET=PM&TILEMATRIX={z}&TILECOL={x}&TILEROW={y}&STYLE=estompage_grayscale&FORMAT=image/png'
+						'https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=ELEVATION.ELEVATIONGRIDCOVERAGE.SHADOW&TILEMATRIXSET=PM&TILEMATRIX={z}&TILECOL={x}&TILEROW={y}&STYLE=estompage_grayscale&FORMAT=image/png'
 						],
 						'tileSize': 256
 					});
 				map.addSource('lerelief', {
 						'type': 'raster',
 						'tiles': [
-						'https://wxs.ign.fr/altimetrie/geoportail/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=ELEVATION.SLOPES&TILEMATRIXSET=PM&TILEMATRIX={z}&TILECOL={x}&TILEROW={y}&STYLE=normal&FORMAT=image/jpeg'
+						'https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=ELEVATION.SLOPES&TILEMATRIXSET=PM&TILEMATRIX={z}&TILECOL={x}&TILEROW={y}&STYLE=normal&FORMAT=image/jpeg'
 						],
 						'tileSize': 256
 					});
@@ -457,7 +457,7 @@ customAttribution: "IGN"
 				map.addSource('lesaeriens', {
 						'type': 'raster',
 						'tiles': [
-						'https://wxs.ign.fr/ortho/geoportail/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=ORTHOIMAGERY.ORTHOPHOTOS&TILEMATRIXSET=PM&TILEMATRIX={z}&TILECOL={x}&TILEROW={y}&STYLE=normal&FORMAT=image/jpeg'
+						'https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=ORTHOIMAGERY.ORTHOPHOTOS&TILEMATRIXSET=PM&TILEMATRIX={z}&TILECOL={x}&TILEROW={y}&STYLE=normal&FORMAT=image/jpeg'
 						],
 						'tileSize': 256
 					});
