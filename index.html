@@ -222,7 +222,8 @@ function profilAlti(pointA,pointB){
 	let lonA=pointA[0];
 	let latB=pointB[1];
 	let lonB=pointB[0];
-	const getprofil="https://wxs.ign.fr/calcul/alti/rest/elevationLine.json?sampling=10&lon="+lonA+"|"+lonB+"&lat="+latA+"|"+latB;
+	// const getprofil="https://wxs.ign.fr/calcul/alti/rest/elevationLine.json?sampling=10&lon="+lonA+"|"+lonB+"&lat="+latA+"|"+latB;
+	const getprofil="https://data.geopf.fr/altimetrie/1.0/calcul/alti/rest/elevationLine.json?resource=ign_rge_alti_wld&delimiter=|&sampling=10&lon="+lonA+"|"+lonB+"&lat="+latA+"|"+latB;
 	const xmlHttp = new XMLHttpRequest();
     xmlHttp.open( "GET", getprofil, false ); // false for synchronous request
     xmlHttp.send( null );
@@ -834,7 +835,7 @@ function spec_epsg(unepsg){
 
 				let leparctrouve=Array.from(lesparcs.parcs).find(i=>i.identifiant==laligne[2]);
 					
-					if(leparctrouve===undefined){
+					if(leparctrouve === undefined){
 						allpois.features.push( {"properties" :{
 															"poicode" : laligne[0],
 															"poigroup" : "pas de parc",
@@ -908,6 +909,7 @@ function spec_epsg(unepsg){
 </script>
 </body>
 </html>
+
 
 
 
