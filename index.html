@@ -832,9 +832,9 @@ function spec_epsg(unepsg){
 
 				let lonlat=proj4(firstProjection,secondProjection,[Number(coordx),Number(coordy)]);
 
-				let leparctrouve=Array.from(lesparcs.parcs).find(i=>i.identifiant==toString(laligne[2]));
+				let leparctrouve=Array.from(lesparcs.parcs).find(i=>i.identifiant==laligne[2]);
 					
-					if(leparctrouve<0){
+					if(leparctrouve===undefined){
 						allpois.features.push( {"properties" :{
 															"poicode" : laligne[0],
 															"poigroup" : "pas de parc",
@@ -908,6 +908,7 @@ function spec_epsg(unepsg){
 </script>
 </body>
 </html>
+
 
 
 
