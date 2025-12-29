@@ -824,9 +824,9 @@ function spec_epsg(unepsg){
 				// for(i=0; i<nbchamp; i++){
 				// window.alert("on lit"+uneligne+" soit "+laligne);
 					// window.alert("on remplit avec "+laligne[1]);
-							let coordx=laligne[18];
-							let coordy=laligne[19];
-							let firstProjection=spec_epsg(laligne[20]);
+							let coordx=laligne[16];
+							let coordy=laligne[17];
+							let firstProjection=spec_epsg(laligne[18]);
 							// if(i % 1000 == 0){console.log("on projette sur "+firstProjection+"!");};
 							let secondProjection="+proj=longlat +datum=WGS84 +no_defs +type=crs";
 
@@ -851,10 +851,10 @@ function spec_epsg(unepsg){
 					else{
 						allpois.features.push( {"properties" :{
 															"poicode" : laligne[0],
-															"poigroup" : "parc"+laligne[1],
+															"poigroup" : "parc"+laligne[2],
 															"poigroupname" : leparctrouve.nom,
 															"poistatut" : leparctrouve.statut,
-															"poiheight" : laligne[7],
+															"poiheight" : laligne[8],
 															"poidistance" : distance(obs_point,lonlat)
 															},
 													 "geometry": { 
@@ -908,5 +908,6 @@ function spec_epsg(unepsg){
 </script>
 </body>
 </html>
+
 
 
