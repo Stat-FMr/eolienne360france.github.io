@@ -832,7 +832,7 @@ function spec_epsg(unepsg){
 
 				let lonlat=proj4(firstProjection,secondProjection,[Number(coordx),Number(coordy)]);
 
-				let leparctrouve=Array.from(lesparcs.parcs).find(i=>i.identifiant==Number(laligne[2]));
+				let leparctrouve=Array.from(lesparcs.parcs).find(i=>i.identifiant=='"'+laligne[2]+'"');
 					
 					if(leparctrouve<0){
 						allpois.features.push( {"properties" :{
@@ -908,6 +908,7 @@ function spec_epsg(unepsg){
 </script>
 </body>
 </html>
+
 
 
 
