@@ -764,8 +764,8 @@ let unepremierereponse=fetch(uneurl)
 			unparc["nom"]=laligne[1]; // nom du parc
 			// calcul du statut du parc : refusée vaut aussi pour les statuts inconnus
 			unparc["statut"]='refusée';
-			if(Math.round(Date.parse((laligne[7])))<Date.now()){unparc["statut"]='en instruction';};
-			if(Math.round(Date.parse((laligne[10])))<Date.now()){unparc["statut"]='accordée';};
+			if(Math.round(Date.parse((laligne[9])))<Date.now()){unparc["statut"]='en instruction';};
+			if(Math.round(Date.parse((laligne[11])))<Date.now()){unparc["statut"]='accordée';};
 			if(Math.round(Date.parse((laligne[13])))<Date.now()){unparc["statut"]='construite';};
 			i++;
 			// if(i % 1000 == 0){window.alert("on passe la ligne"+i);}
@@ -909,6 +909,7 @@ function spec_epsg(unepsg){
 </script>
 </body>
 </html>
+
 
 
 
